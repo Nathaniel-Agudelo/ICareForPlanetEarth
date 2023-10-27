@@ -1,18 +1,24 @@
 // ...
 
 document.addEventListener('DOMContentLoaded', function() {
-    const button = document.getElementsByClassName('button');
+    const button = document.querySelector('.button'); // Select the element with the 'button' class
     const squareContainer = document.getElementById('squareContainer');
+    const textContainer = document.getElementById('textContainer');
 
     button.addEventListener('click', function() {
         // Hide the button
         button.style.display = 'none';
 
-        // Show the black square with text
+        // Show the black square
         squareContainer.style.display = 'block';
-        squareContainer.innerHTML = 'Black Square';
+
+        // Set your custom text
+        textContainer.innerHTML = 'Scientists using space-based radar found that land in New York City is sinking at varying rates from human and natural factors. A few spots are rising.';
     });
 });
+
+
+
 
 
 

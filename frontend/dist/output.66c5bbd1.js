@@ -121,15 +121,18 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 // ...
 
 document.addEventListener('DOMContentLoaded', function () {
-  var button = document.getElementsByClassName('button');
+  var button = document.querySelector('.button'); // Select the element with the 'button' class
   var squareContainer = document.getElementById('squareContainer');
+  var textContainer = document.getElementById('textContainer');
   button.addEventListener('click', function () {
     // Hide the button
     button.style.display = 'none';
 
-    // Show the black square with text
+    // Show the black square
     squareContainer.style.display = 'block';
-    squareContainer.innerHTML = 'Black Square';
+
+    // Set your custom text
+    textContainer.innerHTML = 'Scientists using space-based radar found that land in New York City is sinking at varying rates from human and natural factors. A few spots are rising.';
   });
 });
 
@@ -177,7 +180,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58527" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55097" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
